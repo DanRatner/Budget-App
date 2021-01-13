@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Visualizer</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="budget.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" href="/icon.png">
+</head>
+
+<body>
+    
+    <div class="flex-container has-shadow">
+        <h1>Budget Visualizer</h1>
+        <!--Month Show/Hide-->
+        <div class="flex-item"  id="incomeSection">
+            
+            <!--Income Show/Hide-->
+            <div>
+                <!--Welcome Text-->
+                <p id="welcomeText"></p>
+                
+                <div class="form-style-2">
+                    <label for="income"><span>Monthly Income:</span><input type="text" class="input-field" name="income1" id="income" value=""></label>
+                    
+                    <input type="button" id="incomeButton" value="Add">
+
+                    
+                </div>  
+            </div>
+        </div>
+        
+        <!--Expense Show/Hide-->
+        <div id="expenseSection" class="flex-item">
+            <div class="expenseToggle">
+                <div class="expenseItem">
+                    <h3><a onclick="showhideadd()" style="cursor: pointer;">Log an expense</a></h3>
+                    <div id="addsection" style="display: none; clear: both;"> 
+                        <div class="form-style-2">
+                                <label for="addexpense"><span>Amount:</span><input type="text" class="input-field" name="field1" id="addexpense" value="" /></label>
+                            
+                                <label for="expense"><span>Type</span>    
+                                <select class="select-field" name="expense" id="expenseType" onchange="showbutton()">
+                                    <option disabled selected value></option>
+                                    <option value="rent">Rent</option>
+                                    <option value="bills">Bills</option>
+                                    <option value="loan">Loan</option>
+                                    <option value="grocery">Groceries</option>
+                                    <option value="food">Food</option>
+                                    <option value="gas">Gas</option>
+                                    <option value="misc">Misc</option>
+                                </select></label>
+                                <br><br>
+                                <div id="buttons" style="display: none; clear: both;">
+                                    <input type="button" id="addExpense" value="Add Expense">
+                                    <input type="button" id="subtractExpense" value="Subtract Expense">
+                                <input type="button" id="clearCookies" value="Clear Everything"> 
+                                </div>
+                                
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="piechart" style="width: 40%; height: 90%;"></div>
+
+        </div>
+    
+        <!--Footer-->
+        <div class="flex-item"> 
+            <footer>
+                <div class="grid-item-left">
+                    <p>Created by Daniel Ratner</p>
+                </div>
+                <div class="grid-item-right">
+                    Contact
+                    <br>
+                    <a href="mailto:danielsratner@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/daniel-ratner/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="http://danielratner.info/" target="_blank"><i class="far fa-address-card"></i></a>
+                    
+                </div>
+                
+                
+            </footer> 
+        </div>
+
+    </div>
+</body>
+</html>
+    
